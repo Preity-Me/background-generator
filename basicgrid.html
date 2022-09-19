@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid in CSS</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 200px auto 100px;
+            grid-template-columns: repeat(6, 100px);
+            grid-gap: 5px;
+            grid-template-rows: 1fr 2fr;
+            grid-auto-rows: 3fr;
+            /* grid-column-gap: 50px;
+            grid-row-gap: 100px; */
+      
+        }
+        .item {
+            background-color: burlywood;
+            border: 2px solid black;
+            /* width: 100px;
+            height: 100px; */
+            
+        }
+
+        .item:first-child{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end:3;
+            grid-column: 1/span 4;
+            grid-row: 1/span 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div>
+        <div class="item">I am an item</div><div class="item">I am an item</div>
+    </div>
+</body>
+</html>
